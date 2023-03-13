@@ -202,8 +202,8 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-  /*code here*/
+function getAverageWordLength(array){
+  
 }
 
 
@@ -219,10 +219,17 @@ Use the getRandomFlavors function and new arrays below to do the following:
   For example: getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].
 */
 
-
-function getRandomFlavors(/*code here*/){
-  /*code here*/
+let flavors = [originalFlavors, newFlavors, seasonalFlavors, regionalFlavors];
+function getRandomFlavors(flavors){
+  let randomFlavors = [];
+  for(let i = 0; i < flavors.length; i++ ){
+    let index = Math.floor(Math.random()*flavors.length);
+    randomFlavors.push(flavors[index]);
+    flavors.splice(index, 31);
+  }
 }
+console.log(randomFlavors);
+
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 // const newFlavors = [
