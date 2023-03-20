@@ -223,9 +223,9 @@ let flavors = [originalFlavors, newFlavors, seasonalFlavors, regionalFlavors];
 function getRandomFlavors(flavors){
   let randomFlavors = [];
   for(let i = 0; i < flavors.length; i++ ){
-    let index = Math.floor(Math.random()*flavors.length);
-    randomFlavors.push(flavors[index]);
-    flavors.splice(index, 31);
+    let idx = Math.floor(Math.random()*flavors.length);
+    randomFlavors.push(flavors[idx]);
+    flavors.splice(idx, 31);
   }
 }
 console.log(randomFlavors);
